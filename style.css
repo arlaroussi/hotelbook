@@ -1,0 +1,173 @@
+body {
+	  margin-top: 1%;
+    background-size: 100% 150%;
+    background-image: url("images/hotel4.jpg");
+    background-repeat: repeat-y;
+}
+
+header {
+    background-color: lightblue;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: blue;
+    padding: 1%;
+}
+
+p {
+    font-size: 1.5rem;
+ }
+
+ label {
+  padding-right: 3px;
+ }
+
+button.blue {
+     background-color: #3498db;
+ }
+ 
+ button.green {
+     background-color: #2ecc71;
+ }
+ 
+ button.orange {
+    background-color: orangered;
+ }
+
+ article {
+    margin-left: 3%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+ }
+
+ .police {
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .but-add {
+    height: 50px;
+    width: 50px;
+    padding-left: 3px;
+    background: url(images/add11.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: black;
+    background-position: 0 0;
+    border-radius: 50px 50px;
+  }
+
+  .but-min {
+    height: 50px;
+    width: 50px;
+    padding-left: 3x;
+    background: url(images/minus2.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: black;
+    background-position: 0 0;
+    border-radius: 50px 50px;
+  }
+
+  .rechercher {
+    cursor: pointer;
+    background-color: blue;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border-radius: 50px 50px;
+    background-position: 0 0;
+    width: 70%;
+    height: 55px;
+    font-family: "Lucida Console", "Courier New", monospace;
+    font-size: 1.3em;
+    color: white;
+  }
+
+th, td {
+    padding: 7px;
+    text-align: center;
+    border: 2px solid #f1c40f;
+    border-collapse: collapse;
+    background-color: rgb(151, 131, 169);
+    border-color: rgb(54, 2, 28);
+    border-collapse: collapse;
+    text-align: center;
+}
+
+table {
+  width: 100%;
+  border-radius: 50px 50px;
+}
+
+input[type=text] {
+    width: 80px;
+    text-align: left;
+  }
+
+  input[type=text]:focus {
+    background-color: lightblue;
+  }
+
+  input[name="lieu"] {
+    width: 250px;
+  }
+
+  input[type=date] {
+   height: 45px;
+  }
+
+  input[type=date] {
+    background-color: darkseagreen;
+    font-size: large;
+  }
+
+  h3 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.1em;
+    font-weight: lighter;
+    color: darkblue;
+  }
+
+  h2 {
+    padding: 0px;
+    margin: 0px;
+    font-size: 1.3em;
+    color: rgb(132, 28, 28);
+  }
+
+  h1 {
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  }
+
+h4 {
+    color: green;
+  }
+
+footer {
+    background-color    : red;
+    position            : fixed;
+    bottom              : 0;
+    left                : 0;
+    right               : 0;
+    width               : 40%;
+    height              : 50px
+}
+
+#recap{
+    width: fit-content;
+    margin-top: 25%;
+    margin-right: 75px;
+    margin-top: 3%; 
+}
+
+#confirm {
+  background-color: rgb(140, 173, 240);
+  border-radius: 50px;
+  font-size: 1.3em;
+  font-weight: bold;
+}

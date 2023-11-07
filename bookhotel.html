@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Formulaire</title>
+		  <meta name="viewport" content="width=device-width, initial-scale=1">
+		  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+		  <script src = "https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script> 
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+<body onload="OriginalText()">
+
+    <header class="shadow-lg rounded">
+        <h1>BOOKING HOTEL</h1>
+        <h4>Indiquez vos dates de réservation</h4>
+        <h4>Toute annulation doit se faire 48h avant</h4>
+    </header>
+
+    <div class="container-fluid fs-3">        
+        <section class="row mx-5 px-5 py-5 my-5">
+            <div class="col col-lg-4 px-5 mx-5">
+                <form name="formu1" id="formu1" action="#">
+                    <table id="table">
+                        <tr>
+                            <td colspan="2"><img src="images/hotel.png" width="65px" height="65px" ></td>
+                            <td colspan="2" class="police"><h2>France - Etranger</h2></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><label class="police">Lieu de séjour</label>
+                            <td colspan="2"><input type="text" placeholder="Lieu du séjour" id="lieu" name="lieu" class="police" size="40"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><label class="police">Arrivée</label><br />
+                            <input type="date" id="arr" placeholder="Arrivée"></td>
+                            <td colspan="2"><label class="police">Départ</label><br />
+                            <input type="date" id ="dep" placeholder="Départ" onblur="verifierDate(document.getElementById('dep'), document.getElementById('arr'))"></td>
+                        </tr>
+                        <tr>
+                            <td><label class="police">Adulte</label></td>
+                            <td><input type="text" placeholder="Adultes" id="adulte" class="police"></td>
+                            <td><input type="button" id="imgadd" class="but-add" onclick="augmenterVal('adulte')" /></td>
+                            <td><input type="button" id="imgmin" class="but-min" onclick="diminuerVal('adulte')"/></td>
+                        </tr>
+                        <tr>
+                            <td><label class="police">Enfant</label></td>
+                            <td><input type="text" placeholder="Enfant" id="enfant" class="police"></td>
+                            <td><input type="button" id="imgadd" class="but-add" onclick="augmenterVal('enfant')" /></td>
+                            <td><input type="button" id="imgmin" class="but-min" onclick="diminuerVal('enfant')"/></td>
+                        </tr>
+                        <tr>
+                            <td><label class="police">Chambre</label></td>
+                            <td><input type="text" placeholder="Chambre" id="chambre" class="police"></td>
+                            <td><input type="button" id="imgadd" class="but-add" onclick="augmenterVal('chambre')" /></td>
+                            <td><input type="button" id="imgmin" class="but-min" onclick="diminuerVal('chambre')"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="4"><input type="button" id="submit" class="rechercher btn btn-lg btn-success fs-4" value="Rechercher" onClick="searchBooking();"; /></td>             
+                        </tr>
+                        <tr>
+                            <td colspan="4"><input type="button" id="reset" class="rechercher btn btn-lg btn-success fs-4" value="Effacer" onClick="initFormulaire()" /></td>             
+                        </tr>
+                        <tr>
+                            <td colspan="4"><input type="checkbox" id="travail" name="trav" /> Je voyage pour le travail</td>
+                        </tr>
+                    </table>
+                    </form>
+            </div>
+            <div class="col col-lg-2 px-5 mx-5">
+
+            </div>
+            <div id="confirm" class="col col-lg-4 px-5 mx-5 shadow p-3 mb-5 rounded">
+                    <h2>Confirmation réservation</h2>
+                    <div>
+                        <p>Nombre(s) d'adulte(s) :
+                        <p id="nbadu">0</p>
+                        </p>
+                        <p>Nombre(s) d'enfant(s) :
+                        <p id="nbenf">0</p>
+                        </p>
+                        <p>Nombre(s) de chambre(s) :
+                        <p id="nbchamb">0</p>
+                        </p>
+                    </div>
+                    <section>
+                        <p> Voyage pour le travail :
+                        <p id="voytrav">Non</p>
+                        </p>
+                    </section>
+            </div>
+
+    <script type="text/javascript" src="hotelbooking.js"></script> 
+</body>
+</html>
